@@ -1,7 +1,7 @@
 {% extends 'mysite/base.html' %}
 
 {% block title %} 
-    <title>Slot Details</title>
+    Slot Details
 {% endblock title %}
 
 {% block content %}
@@ -62,11 +62,11 @@
         </button>
         
         <button class="btn btn-sm btn-success m-1">
-          <a href="#"><i class="fas fa-pen"></i> Update Slot</a>
+          <a href="{% url 'campaign:update_slot' object.campaign.id object.id %}"><i class="fas fa-pen"></i> Update Slot</a>
         </button>
 
         <button class="btn btn-sm btn-danger m-1">
-          <a href="#"><i class="fas fa-trash"></i> Delete Slot</a>
+          <a href="{% url 'campaign:delete_slot' object.campaign.id object.id %}"><i class="fas fa-trash"></i> Delete Slot</a>
         </button>
       </div>
     </div>
