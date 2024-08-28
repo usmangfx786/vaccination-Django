@@ -55,6 +55,7 @@
     </div>
 
     <div class="row mb-1 btn-container">
+      {% if user.is_superuser %}
       <div class="col-12">
         <button class="btn btn-sm btn-success m-1">
           <a href="{% url 'center:update_storage' object.id %}">
@@ -68,6 +69,7 @@
           </a>
         </button>
       </div>
+      {% endif %}
     </div>
 
   </div>

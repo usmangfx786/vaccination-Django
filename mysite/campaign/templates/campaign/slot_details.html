@@ -60,7 +60,7 @@
         <button class="btn btn-sm btn-success m-1">
           <a href="#"><i class="fas fa-clock"></i> Schedule</a>
         </button>
-        
+        {% if user.is_superuser %}
         <button class="btn btn-sm btn-success m-1">
           <a href="{% url 'campaign:update_slot' object.campaign.id object.id %}"><i class="fas fa-pen"></i> Update Slot</a>
         </button>
@@ -68,6 +68,7 @@
         <button class="btn btn-sm btn-danger m-1">
           <a href="{% url 'campaign:delete_slot' object.campaign.id object.id %}"><i class="fas fa-trash"></i> Delete Slot</a>
         </button>
+        {% endif %}
       </div>
     </div>
 

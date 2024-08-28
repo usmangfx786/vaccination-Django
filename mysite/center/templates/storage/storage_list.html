@@ -11,7 +11,9 @@
     <h3 class="text-center">
       <i class="fas fa-box"></i> Vaccine Storage List
     </h3>
+    {% if user.is_superuser %}
     <a href="{% url 'center:create_storage' center_id %}"><i class="fas fa-plus"></i> Create Storage</a>
+    {% endif %}
   </div>
 
   <table class="table table-responsive table-hover text-center">

@@ -10,7 +10,9 @@
     <h3 class="text-center">
       <i class="fas fa-syringe"></i> Vaccine List
     </h3>
+    {% if user.is_superuser %}
     <a href="{% url "vaccine:create" %}"><i class="fas fa-plus"></i> Create Vaccine</a>
+    {% endif %}
   </div>
 
   <table class="table table-responsive table-hover">

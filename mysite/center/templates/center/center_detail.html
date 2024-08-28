@@ -35,7 +35,7 @@
             <i class="fas fa-eye"></i> View Storage
           </a>
         </button>
-
+        {% if user.is_superuser %}
         <button class="btn btn-sm btn-success m-1">
           <a href="{% url "center:update" center.id %}">
             <i class="fas fa-pen"></i> Update Center
@@ -47,6 +47,7 @@
             <i class="fas fa-trash"></i> Delete Center
           </a>
         </button>
+        {% endif %}
       </div>
     </div>
   </div>
